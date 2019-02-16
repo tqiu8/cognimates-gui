@@ -16,6 +16,8 @@ import text2speechImage from './text2speech.png';
 import text2speechInsetImage from './text2speech-small.svg';
 import makeymakeyImage from './makeymakey.png';
 import makeymakeyInsetImage from './makeymakey-small.svg';
+import twitterImage from './twitter_ext.jpg';
+import twitterInsetImage from './twitter_ext.jpg';
 
 import microbitPeripheralImage from './peripheral-connection/microbit/microbit-illustration.svg';
 import microbitMenuImage from './peripheral-connection/microbit/microbit-small.svg';
@@ -26,7 +28,27 @@ import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
 
 export default [
-    {
+  {
+      name: (
+          <FormattedMessage
+              defaultMessage="Twitter"
+              description="Name for 'Twitter' extension"
+              id="gui.extension.twitter.name"
+          />
+      ),
+      extensionId: 'twitter',
+      iconURL: twitterImage,
+      insetIconURL: twitterInsetImage,
+      description: (
+          <FormattedMessage
+              defaultMessage="Use Twitter in your projects"
+              description="Description for 'Twitter' extension"
+              id="gui.extension.twitter.description"
+          />
+      ),
+      featured: true
+  },
+  {
         name: (
             <FormattedMessage
                 defaultMessage="Music"
