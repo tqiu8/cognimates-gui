@@ -18,6 +18,8 @@ import makeymakeyImage from './makeymakey.png';
 import makeymakeyInsetImage from './makeymakey-small.svg';
 import twitterImage from './twitter_ext.jpg';
 import twitterInsetImage from './twitter_ext.jpg';
+import visionImage from './vision_ext.png';
+import visionInsetImage from './vision_ext.png';
 
 import microbitPeripheralImage from './peripheral-connection/microbit/microbit-illustration.svg';
 import microbitMenuImage from './peripheral-connection/microbit/microbit-small.svg';
@@ -28,6 +30,26 @@ import wedoMenuImage from './peripheral-connection/wedo/wedo-small.svg';
 import wedoButtonImage from './peripheral-connection/wedo/wedo-button-illustration.svg';
 
 export default [
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Vision"
+                description="Name for 'Vision' extension"
+                id="gui.extension.vision.name"
+            />
+        ),
+        extensionId: 'vision',
+        iconURL: visionImage,
+        insetIconURL: visionInsetImage,
+        description: (
+            <FormattedMessage
+                defaultMessage="Vision Training"
+                description="Description for 'Vision' extension"
+                id="gui.extension.vision.description"
+            />
+        ),
+        featured: true
+    },
   {
       name: (
           <FormattedMessage

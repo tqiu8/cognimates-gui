@@ -281,7 +281,34 @@ class VideoProvider {
             this._workspace.push(workspace);
         }
         return workspace;
+    }    
+    /**
+     * Added by Sarah to take snapshots in clarifai and vision extensions
+     */
+    getImageSnapshot () {
+        if (!this.videoReady) {
+            return null;
+        }
+        let hidden_canvas = document.createElement('canvas');
+        const width = this._video.videoWidth;
+        const height = this._video.videoHeight;  
+
+        // Context object for working with the canvas.
+        const context = hidden_canvas.getContext('2d');
+    
+        // Set the canvas to the same dimensions as the video.
+        hidden_canvas.width = width;
+        hidden_canvas.height = height;
+    
+        // Draw a copy of the current frame from the video on the canvas.
+        context.drawImage(this._video, 0, 0, width, height);
+    
+        // Get an image dataURL from the canvas.
+        let imageDataURL = hidden_canvas.toDataURL('/png');
+        return imageDataURL;
     }
+
+
 }
 
 export default VideoProvider;
